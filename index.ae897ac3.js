@@ -1,2 +1,0 @@
-!function(){var t=function(t){var e={};return new FormData(t).forEach((function(t,r){e[r]=t})),e},e=function(t){var e=JSON.parse(localStorage.getItem("tasks"))||[];e.push(t),localStorage.setItem("tasks",JSON.stringify(e))},r={form:document.querySelector("#task-form"),cardsList:document.querySelector("#task-list")};r.form.addEventListener("submit",(function(a){a.preventDefault();var o=t(r.form);e(o)}))}();
-//# sourceMappingURL=index.ae897ac3.js.map

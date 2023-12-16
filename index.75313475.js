@@ -1,2 +1,0 @@
-const t=t=>{const e={};return new FormData(t).forEach(((t,r)=>{e[r]=t})),e},e=t=>{const e=JSON.parse(localStorage.getItem("tasks"))||[];e.push(t),localStorage.setItem("tasks",JSON.stringify(e))},r={form:document.querySelector("#task-form"),cardsList:document.querySelector("#task-list")};r.form.addEventListener("submit",(s=>{s.preventDefault();const o=t(r.form);e(o)}));
-//# sourceMappingURL=index.75313475.js.map
