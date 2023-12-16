@@ -8,20 +8,14 @@
  * </li>
  *
  */
-import { createFormData } from './js/createFormData';
-import { addTask } from './js/localStorageAPI';
+
 import { refs } from './js/refs';
-import { createTaskMarkup } from './js/createTaskMarkup';
+
 import { renderTasks } from './js/renderTasks';
+import { daleteItem } from './js/daleteItem';
+import { onFormSubmit } from './js/onFormSubmit';
 
 renderTasks();
 
-const onFormSubmit = event => {
-  event.preventDefault();
-  const dataForm = createFormData(refs.form);
-  addTask(dataForm);
-  const markup = createTaskMarkup(dataForm);
-  refs.cardsList.insertAdjacentHTML('beforeend', markup);
-};
-
 refs.form.addEventListener('submit', onFormSubmit);
+refs.cardsList.addEventListener('click', daleteItem);
