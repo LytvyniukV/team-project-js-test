@@ -1,6 +1,13 @@
+const KEY = 'tasks'
+
 export const addTask = dataForm => {
-  const initialFormData = JSON.parse(localStorage.getItem('tasks')) || [];
+  const initialFormData = JSON.parse(localStorage.getItem(KEY)) || [];
   initialFormData.push(dataForm);
 
-  localStorage.setItem('tasks', JSON.stringify(initialFormData));
+  localStorage.setItem(KEY, JSON.stringify(initialFormData));
 };
+
+
+export const getTask = () => {
+   return JSON.parse(localStorage.getItem(KEY));
+}

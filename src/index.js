@@ -12,6 +12,9 @@ import { createFormData } from './js/createFormData';
 import { addTask } from './js/localStorageAPI';
 import { refs } from './js/refs';
 import { createTaskMarkup } from './js/createTaskMarkup';
+import { renderTasks } from './js/renderTasks';
+
+renderTasks();
 
 const onFormSubmit = event => {
   event.preventDefault();
